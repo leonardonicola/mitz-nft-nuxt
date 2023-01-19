@@ -23,7 +23,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ['@pinia/nuxt', '@nuxt/image-edge',],
+  modules: ['@pinia/nuxt'],
   typescript: {
     strict: true,
     },
