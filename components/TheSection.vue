@@ -16,7 +16,7 @@
     <div
       class="hidden lg:inline-block max-w-lg lg:max-w-2xl relative cursor-pointer hover:brightness-110 duration-500"
     >
-      <img
+      <nuxt-img
         src="/nfts/nft.jpg"
         alt="Storm Trooper NFT"
         class="w-full h-full object-cover drop-shadow-2xl"

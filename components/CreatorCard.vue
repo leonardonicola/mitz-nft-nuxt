@@ -1,7 +1,7 @@
 <template>
   <div class="rounded-lg p-6 bg-slate-800 text-white text-start w-96">
     <figcaption class="flex items-center space-x-3">
-      <img
+      <nuxt-img
         class="flex-none w-14 h-14 rounded-full object-cover"
         loading="lazy"
         :src="`/influencers/${props.photo}`"
