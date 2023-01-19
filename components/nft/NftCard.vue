@@ -3,7 +3,7 @@
   <div
     class="grid grid-flow-row grid-rows-3 rounded-3xl overflow-hidden w-full h-full"
   >
-    <img
+    <nuxt-img
       :src="props.url"
       :alt="props.title"
       loading="lazy"
