@@ -23,7 +23,7 @@
           </p>
         </NuxtLink>
       </div>
-      <div class="flex sm:hidden justify-end" @click="open = !open">
+      <div data-test="dropdown-btn" class="flex sm:hidden justify-end" @click="open = !open">
         <Bars3Icon class="w-8 h-8" />
       </div>
       <transition
@@ -35,6 +35,7 @@
         leave-to-class="transform opacity-0 scale-95"
       >
         <div
+          data-test="dropdown-menu"
           v-if="open"
           class="absolute right-0 z-10 mt-12 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
         >
@@ -62,7 +63,7 @@
 
 <script setup lang="ts">
 import Bars3Icon from '@heroicons/vue/24/outline/Bars3Icon'
-
+import { ref } from 'vue';
 const open = ref<boolean>(false)
 
 interface Topics {

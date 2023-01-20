@@ -7,31 +7,14 @@
       class="flex flex-wrap justify-center md:justify-start gap-10 mt-10"
     >
       <div
-        v-for="(item, index) in collections"
+        v-for="(collection, index) in collections"
         :key="index"
         class="w-80 h-[30rem] relative hover:scale-105 duration-500 cursor-pointer"
       >
         <NuxtLink
-          :to="`/colecoes/${toLowerCase(item[0].creator)}`"
+          :to="`/colecoes/${toLowerCase(collection[0].creator)}`"
         >
-          <!-- Componente com infos da NFT -->
-          <div
-            class="grid grid-flow-row grid-rows-3 rounded-3xl overflow-hidden w-full h-full"
-          >
-            <img
-              data-test="collection-img"
-              :src="item[0].url"
-              :alt="item[0].creator"
-              loading="lazy"
-              class="w-full h-full object-cover row-span-2"
-            />
-            <div class="bg-neutral-900 flex flex-col p-4 text-white">
-              <span>Coleção:</span>
-              <span data-test="creator" class="font-bold mb-auto text-2xl">{{
-                item[0].creator
-              }}</span>
-            </div>
-          </div>
+          <NftCollection :url="collection[0].url" :creator="collection[0].creator"/>
         </NuxtLink>
       </div>
     </section>
@@ -47,8 +30,9 @@
 </template>
 
 <script setup lang="ts">
-import { collections } from '../../utils/lists'
+import { collections } from '../../utils/nftCollectionList'
 import { useHead } from '@vueuse/head'
+import NftCollection from '../../components/nft/NftCollection.vue';
 
 function toLowerCase(str: string): string {
   return str.replace(/\s/g, '').toLowerCase()

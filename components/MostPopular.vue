@@ -23,9 +23,9 @@
   </div>
 </template>
 <script setup lang="ts">
-import { populars } from '../utils/lists'
 import { useKeenSlider } from 'keen-slider/vue.es'
 import 'keen-slider/keen-slider.min.css'
+import type {NftsProps} from '../utils/nftCollectionList';
 
 const [container] = useKeenSlider({
   breakpoints: {
@@ -43,4 +43,50 @@ const [container] = useKeenSlider({
     },
   },
 })
+
+const populars: NftsProps[] = [
+    {
+      name: 'CloneX #10959',
+      url: 'clonex2.webp',
+      creator: 'CloneX',
+      price: 5.83,
+      link: 'https://opensea.io/collection/clonex',
+    },
+    {
+      name: 'Karafuru x Hypebeast #30182',
+      url: 'karafuru1.jpg',
+      creator: 'Karafuru',
+      price: 0.12,
+      link: 'https://opensea.io/collection/karafuru-x-hypebeast-x-atmos',
+    },
+    {
+      name: 'HAPE #02182',
+      url: 'hape2.webp',
+      creator: 'Hape Prime',
+      price: 0.43,
+      link: 'https://opensea.io/collection/hapeprime',
+    },
+    {
+      name: 'Meta Samurai #00125',
+      url: 'meta4.webp',
+      creator: 'Meta Samurai',
+      price: 1.31,
+      link: 'https://opensea.io/collection/metasamurai-official',
+    },
+    {
+      name: 'HAPE #39123',
+      url: 'hape1.webp',
+      creator: 'Hape Prime',
+      price: 0.45,
+      link: 'https://opensea.io/collection/hapeprime',
+    },
+    {
+      name: 'CloneX #10960',
+      url: 'clonex3.webp',
+      creator: 'CloneX',
+      price: 5.31,
+      link: 'https://opensea.io/collection/clonex',
+    },
+  ]
+
 </script>

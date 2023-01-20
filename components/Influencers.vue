@@ -36,7 +36,55 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { influencers } from '../utils/lists'
 import CreatorCard from './CreatorCard.vue'
 const showMore = ref<boolean>(false)
+
+interface InfluencersProps {
+  name: string
+  numOfArts: string
+  phrase: string
+  photo: string
+}
+
+const influencers: InfluencersProps[] = [
+  {
+    name: 'Mac Demarco',
+    numOfArts: '2',
+    phrase:
+      "Everybody's a multifaceted, emotional, living being, I think. Sometimes it's fun to goof around, sometimes you've got to think about things, sometimes you've got to be strange, and then you've got to be jiggly. That's just what being a human's all about.",
+    photo: 'demarco.jpg',
+  },
+  {
+    name: 'Tyler, the Creator',
+    numOfArts: '9',
+    phrase: 'You make my earth quake.',
+    photo: 'tyler.webp',
+  },
+  {
+    name: 'Frank Ocean',
+    numOfArts: '2',
+    phrase:
+      "Don't confuse my personality with my attitude. My personality is who I am, and my attitude depends on who you are.",
+    photo: 'frank.jpg',
+  },
+  {
+    name: 'Joji',
+    numOfArts: '3',
+    phrase: 'Love it!',
+    photo: 'jojio.jpg',
+  },
+  {
+    name: 'ASAP Rocky',
+    numOfArts: '13',
+    phrase: 'Mannn this website made my rich as fu@*!',
+    photo: 'asap.jpg',
+  },
+  {
+    name: 'MF DOOM',
+    numOfArts: '13',
+    phrase:
+      "I'm always trying to show versatility. I'm juggling, and I'm flipping fire, and I'm chewing gum and rhyming at the same time... on a unicycle, while playing the drums.",
+    photo: 'mfdoom.jpg',
+  },
+]
 </script>

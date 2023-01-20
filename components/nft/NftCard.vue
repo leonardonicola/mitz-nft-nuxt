@@ -4,14 +4,18 @@
     class="grid grid-flow-row grid-rows-3 rounded-3xl overflow-hidden w-full h-full"
   >
     <img
-      :src="props.url"
+      :src="`/nfts/${creatorNameToLower()}/${props.url}`"
       :alt="props.title"
       loading="lazy"
       class="w-full h-full object-cover row-span-2"
     />
     <div class="bg-neutral-900 flex flex-col p-4 text-white">
-      <span data-test="nft-title" class="font-bold text-xl">{{ props.title }}</span>
-      <span data-test="creator" class="font-light text-lg mb-auto">@{{ props.creator }}</span>
+      <span data-test="nft-title" class="font-bold text-xl">{{
+        props.title
+      }}</span>
+      <span data-test="creator" class="font-light text-lg mb-auto"
+        >@{{ props.creator }}</span
+      >
       <div
         class="text-sky-600 font-bold text-2xl flex justify-between items-center"
       >
@@ -39,4 +43,8 @@ const props = defineProps<{
   url: string
   link: string
 }>()
+
+function creatorNameToLower(): string {
+  return props.creator.replace(/\s/g, '').toLowerCase()
+}
 </script>

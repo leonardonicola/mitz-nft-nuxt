@@ -12,7 +12,7 @@ describe('Creator Card', () => {
     },
   })
 
-  test('img src should match props data', () => {
+  test('img src should have correct path', () => {
 
     expect(wrapper.find('img').attributes('src')).toEqual('/influencers/tyler.webp')
   })
