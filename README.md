@@ -1,10 +1,46 @@
-# Nuxt 3 Minimal Starter
+![image](https://user-images.githubusercontent.com/85263860/213794528-06203c3c-262b-4c02-b9e2-6826cda626e9.png)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
 
-Make sure to install the dependencies:
+# MITZ NFT
+
+Uma galeria de coleções de NFT's simples
+
+## Etiquetas
+
+![Development](https://img.shields.io/badge/Status-Development-green)
+![Languages](https://img.shields.io/github/languages/count/leonardonicola/mitz-nft-nuxt?color=blueviolet)
+![License](https://img.shields.io/github/license/leonardonicola/mitz-nft-nuxt?color=blueviolet")
+
+
+## Status
+
+- [x] Criar projeto com Nuxt.js
+- [x] Criar componentes reutilizaveis
+- [x] Criar páginas
+  - [x] Página home
+  - [x] Páginas coleções
+- [x] Criar rotas
+  - [x] Rota home
+  - [x] Rota coleções
+- [x] Criar testes unitários
+- [x] Fazer deploy do projeto no Vercel como SSG
+
+
+## Tecnologias
+
+- [Vue](https://vuejs.org/)
+- [Nuxt](https://nuxt.com/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Vitest](https://vitest.dev/)
+- [Vue Test Utils](https://test-utils.vuejs.org/)
+- [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+
+
+## Instalação
+
+Instale mitz-nft-nuxt na sua máquina
 
 ```bash
 # yarn
@@ -12,31 +48,26 @@ yarn install
 
 # npm
 npm install
-
-# pnpm
-pnpm install
 ```
 
-## Development Server
-
-Start the development server on http://localhost:3000
+Inicia o projeto em ambiente de desenvolvimento
 
 ```bash
-npm run dev
+# Run the tests
+$ yarn dev
+# or
+$ npm run dev
 ```
-
-## Production
-
-Build the application for production:
+    
+Rode os testes unitários
 
 ```bash
-npm run build
+# Run the tests
+$ yarn test
+# or
+$ npm run test
 ```
+## Autores
 
-Locally preview production build:
+- [@leonardonicola](https://www.github.com/leonardonicola)
 
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
