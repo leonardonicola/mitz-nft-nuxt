@@ -7,22 +7,22 @@ describe('NFT Card', () => {
     props: {
       title: 'CloneX',
       price: 5.83,
-      creator: 'Me',
-      url: '/url',
+      creator: 'Clone X',
+      url: 'img.png',
       link: 'link.com',
     },
   })
 
-  test('img src should match props data', () => {
-    expect(wrapper.find('img').attributes('src')).toEqual('/url')
+  test('img src path should be creator name in lower case and without whitespaces', () => {
+    expect(wrapper.find('img').attributes('src')).toEqual('/nfts/clonex/img.png')
   })
 
-  test('title of NFT should match props data', () => {
+  test('NFT title should match props data', () => {
     expect(wrapper.find('[data-test="nft-title"]').text()).toEqual('CloneX')
   })
 
   test('creator s name should match props data', () => {
-    expect(wrapper.find('[data-test="creator"]').text()).toEqual('@Me')
+    expect(wrapper.find('[data-test="creator"]').text()).toEqual('@Clone X')
   })
 
   test('price should match props data', () => {
