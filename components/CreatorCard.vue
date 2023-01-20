@@ -7,11 +7,11 @@
         :src="`/influencers/${props.photo}`"
         :alt="props.name"
       />
-      <span>{{ props.name }}</span>
+      <span data-test="influencer-name">{{ props.name }}</span>
     </figcaption>
     <blockquote class="mt-2 text-slate-200 justify-start">
       <div class="flex flex-col">
-        <span class="font-bold">{{ props.numOfArts }} NFT's</span>
+        <span data-test="num-arts" class="font-bold">{{ props.numOfArts }} NFT's</span>
       </div>
       <p class="italic">"{{ props.phrase }}"</p>
     </blockquote>

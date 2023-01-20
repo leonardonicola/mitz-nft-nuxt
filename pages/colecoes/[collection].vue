@@ -70,13 +70,13 @@
 </template>
 
 <script setup lang="ts">
-import { useListsStore } from '~/stores/lists'
+import { collections } from '../../utils/lists'
 import { useKeenSlider } from 'keen-slider/vue.es'
 import 'keen-slider/keen-slider.min.css'
 import ArrowLeftIcon from '@heroicons/vue/24/outline/ArrowLeftIcon'
-import { Ref } from '@vue/reactivity'
+import { Ref } from 'vue'
+import { useRoute, ref, useHead } from '#imports'
 
-const { collections } = useListsStore()
 const { collection } = useRoute().params
 const collectionToString: string = collection.toString()
 

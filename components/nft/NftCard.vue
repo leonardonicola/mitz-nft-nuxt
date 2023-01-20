@@ -10,14 +10,14 @@
       class="w-full h-full object-cover row-span-2"
     />
     <div class="bg-neutral-900 flex flex-col p-4 text-white">
-      <span class="font-bold text-xl">{{ props.title }}</span>
-      <span class="font-light text-lg mb-auto">@{{ props.creator }}</span>
+      <span data-test="nft-title" class="font-bold text-xl">{{ props.title }}</span>
+      <span data-test="creator" class="font-light text-lg mb-auto">@{{ props.creator }}</span>
       <div
         class="text-sky-600 font-bold text-2xl flex justify-between items-center"
       >
         <div class="flex gap-2">
           <CubeTransparentIcon class="w-7 h-7" />
-          <p>{{ props.price }} ETH</p>
+          <p data-test="price">{{ props.price }} ETH</p>
         </div>
         <a :href="props.link" target="_blank">
           <button
