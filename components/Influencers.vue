@@ -20,7 +20,7 @@
       />
 
       <div
-        :class="showMore ? 'hidden' : ' '"
+        v-show="!showMore"
         class="inset-x-0 bottom-0 flex justify-center bg-gradient-to-t from-white pt-10 pb-8 pointer-events-none absolute"
       >
         <button
@@ -35,7 +35,8 @@
 </template>
 
 <script setup lang="ts">
-import { useListsStore } from '~/stores/lists'
-const { influencers } = useListsStore()
+import { ref } from 'vue'
+import { influencers } from '../utils/lists'
+import CreatorCard from './CreatorCard.vue'
 const showMore = ref<boolean>(false)
 </script>

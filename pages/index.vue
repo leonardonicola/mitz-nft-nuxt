@@ -7,6 +7,8 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from '#imports';
+
 useHead({
   link:[
     { rel: 'preload', href: 'nfts/nft.jpg', as:'image'}

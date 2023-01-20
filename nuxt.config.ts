@@ -23,7 +23,6 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ['@pinia/nuxt'],
   typescript: {
     strict: true,
     },

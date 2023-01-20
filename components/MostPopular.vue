@@ -23,11 +23,9 @@
   </div>
 </template>
 <script setup lang="ts">
+import { populars } from '../utils/lists'
 import { useKeenSlider } from 'keen-slider/vue.es'
 import 'keen-slider/keen-slider.min.css'
-import { useListsStore } from '~/stores/lists'
-
-const { populars } = useListsStore()
 
 const [container] = useKeenSlider({
   breakpoints: {

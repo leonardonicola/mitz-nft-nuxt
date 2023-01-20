@@ -1,5 +1,3 @@
-import { defineStore } from 'pinia'
-
 interface NftsProps {
   name: string
   url: string
@@ -18,10 +16,9 @@ interface InfluencersProps {
   phrase: string
   photo: string
 }
-
-export const useListsStore = defineStore('lists', () => {
-  const collections: StateProps = {
-    hape: [
+ 
+export const collections: StateProps = {
+    hapeprime: [
       {
         name: 'HAPE #39123',
         url: '/nfts/hape/hape1.webp',
@@ -143,7 +140,7 @@ export const useListsStore = defineStore('lists', () => {
     ],
   }
 
-  const populars: NftsProps[] = [
+export const populars: NftsProps[] = [
     {
       name: 'CloneX #10959',
       url: '/nfts/clonex/clonex2.webp',
@@ -188,7 +185,7 @@ export const useListsStore = defineStore('lists', () => {
     },
   ]
 
-  const influencers: InfluencersProps[] = [
+export const influencers: InfluencersProps[] = [
     {
       name: 'Mac Demarco',
       numOfArts: '2',
@@ -229,6 +226,3 @@ export const useListsStore = defineStore('lists', () => {
       photo: 'mfdoom.jpg',
     },
   ]
-
-  return { collections, populars, influencers }
-})
