@@ -1,16 +1,17 @@
-export interface NftsProps {
+interface NftsProps {
   name: string
   url: string
   creator: string
   price: number
   link: string
+  [key: string]: string | number
 }
 
 interface StateProps {
   [key: string]: NftsProps[]
 }
  
-export const collections: StateProps = {
+const collections: StateProps = {
     hapeprime: [
       {
         name: 'HAPE #39123',
@@ -133,3 +134,4 @@ export const collections: StateProps = {
     ],
   }
 
+export {NftsProps, collections}
