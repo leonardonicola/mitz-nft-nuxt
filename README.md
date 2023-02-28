@@ -4,7 +4,7 @@
 
 # MITZ NFT
 
-Uma galeria de coleções de NFT's simples
+Uma galeria de coleções de NFT's
 
 ## Etiquetas
 
